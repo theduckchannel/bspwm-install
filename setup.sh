@@ -28,7 +28,7 @@ sudo pacman -S $PACMAN_PACKAGES
 
 
 
-YAY_PACKAGES="ttf-iosevka-custom-git polybar nerd-fonts-iosevka nerd-fonts-meslo siji-git ttf-unifont ttf-material-icons-git" 
+YAY_PACKAGES="ttf-iosevka-custom-git polybar nerd-fonts-iosevka nerd-fonts-meslo siji-git ttf-unifont ttf-material-icons-git fastfetch" 
 yay -S $YAY_PACKAGES
 clear
 echo "Packages installed..."
