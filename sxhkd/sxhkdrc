@@ -71,7 +71,7 @@ ctrl + alt + {q,r}
 	bspc {quit,wm -r}
 
 # Close App
-super + c
+super + q
 	bspc node -c
 
 # kill
