@@ -21,6 +21,12 @@ And be patient because the command above will install every packages you need fo
 
 # Shortcuts
 
+| Primeiro cabeçalho  |  Segundo cabeçalho  |
+| ------------------- | ------------------- |
+|  Célula de conteúdo |  Célula de conteúdo |
+|  Célula de conteúdo |  Célula de conteúdo |
+
+
 | Key       | Action     | 
 | :------------- | :----------: | -----------: |
 | ctrl + alt + t | Change bspwm theme |
