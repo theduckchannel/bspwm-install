@@ -26,14 +26,17 @@ PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany
 
 sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
+## declare an array variable
+declare -a array=("nerd-fonts-iosevka" "nerd-fonts-meslo" "siji-git" "ttf-unifont" "ttf-material-icons-git" "fastfetch" "polybar")
 
-yay -S --noconfirm nerd-fonts-iosevka 
-yay -S --noconfirm nerd-fonts-meslo 
-yay -S --noconfirm siji-git 
-yay -S --noconfirm ttf-unifont 
-yay -S --noconfirm ttf-material-icons-git 
-yay -S --noconfirm fastfetch
-yay -S --noconfirm polybar 
+# get length of an array
+arraylength=${#array[@]}
+
+# use for loop to read all values and indexes
+for (( i=0; i<${arraylength}; i++ ));
+do
+  yay -S --noconfirm  ${array[$i]}
+done
 
 
 clear
@@ -44,7 +47,7 @@ echo "Packages installed..."
 echo "::: Stage 3 - Install dotfiles..."
 read -p "Press any key to continue..."
 
-mkdir ~/.config
+#mkdir ~/.config
 cp -r bspwm/ ~/.config/
 cp -r libfm/ ~/.config/
 cp -r pcmanfm/ ~/.config/
