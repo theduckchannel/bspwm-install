@@ -61,5 +61,9 @@ sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf
 sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
 clear
-echo "It's ok! Now you can reboot...."
+
+echo ""
+echo "hummmmmmm, everything ok!!!"
+echo "Press any key to reboot...."
+
 
