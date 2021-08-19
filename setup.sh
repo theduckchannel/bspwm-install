@@ -20,9 +20,12 @@ echo "::: Stage 2 - Install fundamentals packages..."
 read -p "Press any key to continue..."
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager"
 
 sudo pacman -S $PACMAN_PACKAGES
+
+
+
 
 
 YAY_PACKAGES="ttf-iosevka-custom-git polybar betterlockscreen-git nerd-fonts-iosevka" 
