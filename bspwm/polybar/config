@@ -52,8 +52,8 @@ module-margin-right = 1
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 
-modules-left = mod bspwm
-modules-center = mpd
+modules-left = mod bspwm 
+modules-center = 
 modules-right = volume backlight battery network date
 
 separator =

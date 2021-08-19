@@ -126,6 +126,7 @@ bspcolors
 bspcomp
 bspbar
 bspfloat &
+/usr/bin/nm-applet &
 
 ## Adjust backlight (AMD)
 #blight -d amdgpu_bl0 set 15%
