@@ -58,7 +58,6 @@ read -p ""
 cp -r dunst ~/.config
 cp -r bspwm/ ~/.config/
 cp -r libfm/ ~/.config/
-cp -r pcmanfm/ ~/.config/
 cp -r sxhkd/ ~/.config/
 cp -r fish ~/.config/
 cp .fehbg ~/
