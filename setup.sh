@@ -26,7 +26,7 @@ read -p ""
 
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd thunar raw-thumbnailer thunar-archive-plugin midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts adapta-gtk-theme"
 
 sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
@@ -65,6 +65,8 @@ cp .fehbg ~/
 cp -r .Xresources.d/ ~/
 cp .Xresources ~/
 cp /etc/lxdm/lxdm.conf .
+cp -r gtk-3.0 ~/.config
+
 
 
 

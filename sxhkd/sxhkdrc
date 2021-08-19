@@ -28,8 +28,8 @@ ctrl + alt + {s,n,t}
 ##---------- Applications ----------##
 
 # Launch Apps
-super + shift + {f,w,e}
-	{pcmanfm,midori,geany}
+super + t
+	thunar
 
 ##---------- System ----------##
 
