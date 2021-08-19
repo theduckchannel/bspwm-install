@@ -24,12 +24,6 @@ And be patient because the command above will install every packages you need fo
 | Primeiro cabeçalho  |  Segundo cabeçalho  |
 | ------------------- | ------------------- |
 |  ctrl + alt + t     |  Change bspwm theme |
-|  test1 |  test |
-
-
-| Key       | Action     | 
-| :------------- | :----------: | -----------: |
-|  |  |
 | super + Return   |  Terminal |
 | super + shift + Return | Floating Terminal |
 | super + q | Close window |
