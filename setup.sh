@@ -77,7 +77,6 @@ sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
 clear
 
-
 cecho -c 'yellow' "hummmmmmm, everything ok!!!"
 cecho -c 'red' "Press any key to reboot...."
 read -p " "
