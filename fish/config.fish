@@ -37,6 +37,7 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 #Important Variables
 export EDITOR=vim
 
+
 if status is-interactive
     fastfetch
 end
