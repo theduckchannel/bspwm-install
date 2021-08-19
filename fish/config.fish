@@ -39,5 +39,5 @@ export EDITOR=vim
 
 
 if status is-interactive
-    fastfetch
+    neofetch
 end
