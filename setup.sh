@@ -25,9 +25,6 @@ PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany
 sudo pacman -S $PACMAN_PACKAGES
 
 
-
-
-
 YAY_PACKAGES="ttf-iosevka-custom-git polybar nerd-fonts-iosevka nerd-fonts-meslo siji-git ttf-unifont ttf-material-icons-git fastfetch" 
 yay -S $YAY_PACKAGES
 clear
@@ -38,11 +35,12 @@ echo "Packages installed..."
 echo "::: Stage 3 - Install dotfiles..."
 read -p "Press any key to continue..."
 
-
+mkdir ~/.config
 cp -r bspwm/ ~/.config/
 cp -r libfm/ ~/.config/
 cp -r pcmanfm/ ~/.config/
 cp -r sxhkd/ ~/.config/
+cp -r fish ~/.config/
 cp .fehbg ~/
 cp -r .Xresources.d/ ~/
 cp .Xresources ~/
