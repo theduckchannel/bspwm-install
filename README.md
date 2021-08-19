@@ -21,7 +21,7 @@ And be patient because the command above will install every packages you need fo
 
 # Shortcuts
 
-| Primeiro cabeçalho  |  Segundo cabeçalho  |
+| Shortcut  |  Action  |
 | ------------------- | ------------------- |
 |  ctrl + alt + t     |  Change bspwm theme |
 | super + Return   |  Terminal |
