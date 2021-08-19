@@ -1,11 +1,13 @@
 #!/bin/bash
 
+source cecho.sh
 
 sudo pacman -Syyu
-clear
 # ENABLE AUR
-echo "::: Stage 1 - enable AUR"
-read -p "Press any key to continue..."
+clear
+cecho -c 'green' "::: Stage 1 - enable AUR"
+cecho -c 'white' "Press any key to continue..."
+read -p ""
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -13,13 +15,15 @@ makepkg -si
 cd ..
 rm -rf yay
 
-clear
-echo "aur enabled with success!"
+cecho -c 'yellow' "aur enabled with success!"
 
 # Install packages fundamentals
 
-echo "::: Stage 2 - Install fundamentals packages..."
-read -p "Press any key to continue..."
+clear
+cecho -c 'green' "::: Stage 2 - Install fundamentals packages..."
+cecho -c 'white' "Press any key to continue..."
+read -p ""
+
  
 
 PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts"
@@ -44,8 +48,11 @@ echo "Packages installed..."
 
 # Install packages fundamentals
 
-echo "::: Stage 3 - Install dotfiles..."
-read -p "Press any key to continue..."
+clear
+cecho -c 'green' "::: Stage 3 - Install dotfiles..."
+cecho -c 'white' "Press any key to continue..."
+read -p ""
+
 
 #mkdir ~/.config
 cp -r dunst ~/.config
@@ -69,8 +76,10 @@ sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
 clear
 
-echo ""
-echo "hummmmmmm, everything ok!!!"
-echo "Press any key to reboot...."
+
+cecho -c 'yellow' "hummmmmmm, everything ok!!!"
+cecho -c 'red' "Press any key to reboot...."
+read -p " "
+reboot
 
 
