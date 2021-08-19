@@ -75,6 +75,9 @@ sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf
 
 sudo cp lxdm.conf /etc/lxdm/lxdm.conf
 
+# Config polybar
+sh polybar-config.sh
+
 clear
 
 cecho -c 'yellow' "hummmmmmm, everything ok!!!"
