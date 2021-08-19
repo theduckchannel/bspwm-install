@@ -46,6 +46,7 @@ cp -r sxhkd/ ~/.config/
 cp .fehbg ~/
 cp -r .Xresources.d/ ~/
 cp .Xresources ~/
+cp /etc/lxdm/lxdm.conf .
 sed -i "s/# autologin=dgod/autologin=$(whoami)/" lxdm.conf 
 sed -i "s/# numlock=0/numlock=1/" lxdm.conf 
 sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf 
