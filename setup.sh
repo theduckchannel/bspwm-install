@@ -22,7 +22,7 @@ echo "::: Stage 2 - Install fundamentals packages..."
 read -p "Press any key to continue..."
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts"
 
 sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
@@ -48,6 +48,7 @@ echo "::: Stage 3 - Install dotfiles..."
 read -p "Press any key to continue..."
 
 #mkdir ~/.config
+cp -r dunst ~/.config
 cp -r bspwm/ ~/.config/
 cp -r libfm/ ~/.config/
 cp -r pcmanfm/ ~/.config/
@@ -57,6 +58,9 @@ cp .fehbg ~/
 cp -r .Xresources.d/ ~/
 cp .Xresources ~/
 cp /etc/lxdm/lxdm.conf .
+
+
+
 sed -i "s/# autologin=dgod/autologin=$(whoami)/" lxdm.conf 
 sed -i "s/# numlock=0/numlock=1/" lxdm.conf 
 sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf 
