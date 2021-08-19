@@ -23,6 +23,7 @@ And be patient because the command above will install every packages you need fo
 
 | Key       | Action     | 
 | :------------- | :----------: | -----------: |
+| ctrl + alt + t | Change bspwm theme |
 | super + Return   |  Terminal |
 | super + shift + Return | Floating Terminal |
 | super + q | Close window |
