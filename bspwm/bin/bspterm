@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# launch alacritty with bspwm config
+if [ "$1" == "-f" ]; then
+	alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.yml
+else
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml
+fi
