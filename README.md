@@ -1,2 +1,3 @@
-# archcraft-style-bspwm
-Scripts and files to style Archcraft's bspwm desktop
+# duckchannel-style-bspwm
+
+Scripts and files to style The Duck Channel's bspwm desktop
