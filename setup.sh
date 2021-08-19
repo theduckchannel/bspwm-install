@@ -20,7 +20,7 @@ echo "::: Stage 2 - Install fundamentals packages..."
 read -p "Press any key to continue..."
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-xsetroot xorg-fonts-misc xorg-xrandr papirus-icon-theme exa dunst file-roller parted ttf-fira-code"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-xsetroot xorg-fonts-misc xorg-xrandr papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget"
 
 sudo pacman -S $PACMAN_PACKAGES
 
