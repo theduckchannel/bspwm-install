@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+sudo pacman -Syyu
 clear
 # ENABLE AUR
 echo "::: Stage 1 - enable AUR"
