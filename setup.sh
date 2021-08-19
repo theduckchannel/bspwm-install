@@ -20,13 +20,20 @@ echo "::: Stage 2 - Install fundamentals packages..."
 read -p "Press any key to continue..."
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-xsetroot xorg-fonts-misc xorg-xrandr papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd pcmanfm midori geany i3lock ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget"
 
-sudo pacman -S $PACMAN_PACKAGES
+sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
 
-YAY_PACKAGES="ttf-iosevka-custom-git polybar nerd-fonts-iosevka nerd-fonts-meslo siji-git ttf-unifont ttf-material-icons-git fastfetch" 
-yay -S $YAY_PACKAGES
+yay -S --noconfirm nerd-fonts-iosevka 
+yay -S --noconfirm nerd-fonts-meslo 
+yay -S --noconfirm siji-git 
+yay -S --noconfirm ttf-unifont 
+yay -S --noconfirm ttf-material-icons-git 
+yay -S --noconfirm fastfetch
+yay -S --noconfirm polybar 
+
+
 clear
 echo "Packages installed..."
 
