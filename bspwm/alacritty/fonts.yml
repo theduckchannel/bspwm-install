@@ -2,26 +2,26 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "Iosevka Custom"
+    family: "Fira Code"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "Iosevka Custom"
+    family: "Fira Code"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "Iosevka Custom"
+    family: "Fira Code"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Iosevka Custom"
+    family: "Fira code"
     #style: Bold Italic
 
   # Point size
-  size: 9
+  size: 10
 
   # Offset
   #offset:
