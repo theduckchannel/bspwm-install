@@ -26,12 +26,12 @@ read -p ""
 
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd thunar raw-thumbnailer thunar-archive-plugin midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox polkit-gnome xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts adapta-gtk-theme neofetch"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd thunar raw-thumbnailer thunar-archive-plugin midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts adapta-gtk-theme neofetch"
 
 sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
 ## declare an array variable
-declare -a array=("nerd-fonts-iosevka" "nerd-fonts-meslo" "siji-git" "ttf-unifont" "ttf-material-icons-git" "polybar" "i3lock-color")
+declare -a array=("nerd-fonts-iosevka" "nerd-fonts-meslo" "siji-git" "ttf-unifont" "ttf-material-icons-git" "polybar" "i3lock-color" "xfce-polkit")
 
 # get length of an array
 arraylength=${#array[@]}
