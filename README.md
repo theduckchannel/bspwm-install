@@ -1,3 +1,5 @@
+![screenshot](/images/screenshot.jpg "The Duck Channel´s bspwm style screenshot")
+
 # The Duck Channel Style bspwm
 
 Hi all, this is repository for install one light bspwm environment. 
