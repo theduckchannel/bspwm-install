@@ -1,9 +1,5 @@
 ![screenshot](/images/screenshot.jpg "The Duck Channel´s bspwm style screenshot")
 
-# The Duck Channel Style bspwm
-
-Hi all, this is repository for install one light bspwm environment. 
-
 Table of Contents
 =================
 
@@ -12,6 +8,11 @@ Table of Contents
    * [How to Install](#how-to-install)
 * [Shortcuts](#shortcuts)
 * [About](#about)
+
+# The Duck Channel Style bspwm
+
+Hi all, this is repository for install one light bspwm environment. 
+
 
 ## Requirements
 
