@@ -217,6 +217,6 @@
 #
 [play_sound]
 summary = "*"
-script = $HOME/.config/dunst/notification.sh
+script = ~/.config/dunst/notification.sh
 
 
