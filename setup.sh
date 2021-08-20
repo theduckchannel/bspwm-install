@@ -26,7 +26,7 @@ read -p ""
 
  
 
-PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd thunar raw-thumbnailer thunar-archive-plugin midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts adapta-gtk-theme neofetch"
+PACMAN_PACKAGES="alacritty rofi feh scrot picom bspwm sxhkd thunar raw-thumbnailer thunar-archive-plugin midori geany ranger leafpad mpd pipewire pipewire-alsa pipewire-pulse pipewire-jack libfm lxappearance firefox xfce4-power-manager xorg-fonts-misc papirus-icon-theme exa dunst file-roller parted ttf-fira-code fish wget noto-fonts adapta-gtk-theme neofetch pavucontrol"
 
 sudo pacman -S --noconfirm $PACMAN_PACKAGES
 
