@@ -3,16 +3,16 @@
 Table of Contents
 =================
 
+* [Table of Contents](#table-of-contents)
 * [The Duck Channel Style bspwm](#the-duck-channel-style-bspwm)
    * [Requirements](#requirements)
    * [How to Install](#how-to-install)
-* [Shortcuts](#shortcuts)
+   * [Shortcuts](#shortcuts)
 * [About](#about)
 
 # The Duck Channel Style bspwm
 
 Hi all, this is repository for install one light bspwm environment. 
-
 
 ## Requirements
 
@@ -32,7 +32,7 @@ $ ./setup.sh
 And be patient because the command above will install every packages you need for minimal and light bspwm environment.
 
 
-# Shortcuts
+## Shortcuts
 
 | Shortcut  |  Action  |
 | ------------------- | ------------------- |
