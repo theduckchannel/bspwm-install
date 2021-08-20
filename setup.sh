@@ -1,5 +1,4 @@
 #!/bin/bash
-
 source cecho.sh
 
 sudo pacman -Syyu
