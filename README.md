@@ -4,9 +4,19 @@
 
 Hi all, this is repository for install one light bspwm environment. 
 
+Table of Contents
+=================
+
+* [The Duck Channel Style bspwm](#the-duck-channel-style-bspwm)
+   * [Requirements](#requirements)
+   * [How to Install](#how-to-install)
+* [Shortcuts](#shortcuts)
+* [About](#about)
+
 ## Requirements
 
 1. Arch Linux Installed with xorg
+2. lxdm Display Manager installed and enabled
 
 ## How to Install
 
