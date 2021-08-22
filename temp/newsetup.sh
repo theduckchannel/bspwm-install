@@ -1,7 +1,15 @@
 #!/usr/bin/python
-
+import os
+import sys
+import configparser
 # Python 3, function
 # Author: J.Hadida (jhadida87 at ggooglemail)
+
+#allow_no_value=False
+
+cp = configparser.ConfigParser(allow_no_value=True)
+cp.read('packages.ini')
+
 
 def cprint( fmt, fg=None, bg=None, style=None ):
     """
@@ -74,21 +82,34 @@ def cprint( fmt, fg=None, bg=None, style=None ):
 
 
 
+def cmd(parameter):
+    os.system(parameter)
+    
+
+def showWelcomeScreen():
+    cprint('===========================================================', fg='y', style='b')
+    cprint(':: The Duck Channel´s bspwm Style ::', fg='g', style='b')
+    cprint('https://github.com/theduckchannel/bspwm-install', fg='c', style='b')
+    cprint('===========================================================', fg='y', style='b')
+
+    
+def installRegularPackages():
+    cprint('\r\n:: Installing Regular packages...', fg='y', style='b')
+    regPkgs = ''
+    for pkg in cp['Regular']:
+        #print(pkg)
+        regPkgs = regPkgs + pkg + ' '
+
+    print(regPkgs)
 
 def main():
-    cprint("Hello World!", fg='g')
-    print (art)
-
-
-art="""
- _____ _           ______            _      _____ _                            _     
-|_   _| |          |  _  \          | |    /  __ \ |                          | |    
-  | | | |__   ___  | | | |_   _  ___| | __ | /  \/ |__   __ _ _ __  _ __   ___| |___ 
-  | | | '_ \ / _ \ | | | | | | |/ __| |/ / | |   | '_ \ / _` | '_ \| '_ \ / _ \ / __|
-  | | | | | |  __/ | |/ /| |_| | (__|   <  | \__/\ | | | (_| | | | | | | |  __/ \__ \
-  \_/ |_| |_|\___| |___/  \__,_|\___|_|\_\  \____/_| |_|\__,_|_| |_|_| |_|\___|_|___/
-"""                                                                                     
-
+    showWelcomeScreen()
+    #print(cp.sections())
+    installRegularPackages()
+    #for section in cp.sections():
+    #    print(section)
+    #    for name in cp.items(section):
+    #        print(name[0])
 
 
 

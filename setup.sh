@@ -63,7 +63,7 @@ cp .fehbg ~/
 cp -r .Xresources.d/ ~/
 cp .Xresources ~/
 cp /etc/lxdm/lxdm.conf .
-cp -r gtk-3.0 ~/.config
+cp -r 'gtk-3.0' ~/.config
 
 
 
