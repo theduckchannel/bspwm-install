@@ -127,6 +127,7 @@ def installLxdm():
     lxdmCp['base']['session'] = sp.getoutput('which bspwm')
     saveLxdmConf()
     os.system('sudo cp lxdm.conf /etc/lxdm/lxdm.conf')
+    os.system('rm lxdm.conf')
     pause()
     
 
