@@ -2,6 +2,8 @@
 import os
 import sys
 import configparser
+import time
+import subprocess as sp
 # Python 3, function
 # Author: J.Hadida (jhadida87 at ggooglemail)
 
@@ -9,7 +11,7 @@ import configparser
 
 cp = configparser.ConfigParser(allow_no_value=True)
 cp.read('packages.ini')
-
+lxdmCp = configparser.ConfigParser()
 
 def cprint( fmt, fg=None, bg=None, style=None ):
     """
@@ -86,13 +88,49 @@ def cmd(parameter):
     os.system(parameter)
     
 
+def pause():
+    time.sleep(3)
+
+
+def saveLxdmConf():
+    with open('lxdm.conf', 'w') as configfile:
+        lxdmCp.write(configfile)
+
+
+
 def showWelcomeScreen():
     cprint('===========================================================', fg='y', style='b')
     cprint(':: The Duck Channel´s bspwm Style ::', fg='g', style='b')
     cprint('https://github.com/theduckchannel/bspwm-install', fg='c', style='b')
     cprint('===========================================================', fg='y', style='b')
+    pause()
 
+ 
+
+def installXorg():
+    cprint('\r\n\r\n:: Installing xorg...', fg='y', style='b')    
+    #os.system('sudo pacman --noconfirm -S xorg')
+    pause()
+
+
+def installLxdm(): 
+    cprint('\r\n\r\n:: Installing Lxdm...', fg='y', style='b')    
+    #os.system('sudo pacman --noconfirm -S lxdm')
+    #os.system('sudo systemctl enable lxdm')
+    # Copy lxdm.conf to local copy
+    os.system('cp /etc/lxdm/lxdm.conf .')
+    username = sp.getoutput('whoami')
+    lxdmCp.read('lxdm.conf')
+    #lxdmCp.set('base', 'autologin',username)
+    lxdmCp['base']['autologin'] = username
+    lxdmCp['base']['numlock'] = '1'
+    lxdmCp['base']['session'] = sp.getoutput('which bspwm')
+    saveLxdmConf()
+    os.system('sudo cp lxdm.conf /etc/lxdm/lxdm.conf')
+    pause()
     
+
+
 def installRegularPackages():
     cprint('\r\n:: Installing Regular packages...', fg='y', style='b')
     regPkgs = ''
@@ -104,13 +142,8 @@ def installRegularPackages():
 
 def main():
     showWelcomeScreen()
-    #print(cp.sections())
-    installRegularPackages()
-    #for section in cp.sections():
-    #    print(section)
-    #    for name in cp.items(section):
-    #        print(name[0])
-
+    installXorg()
+    installLxdm()
 
 
 if __name__ == "__main__":
