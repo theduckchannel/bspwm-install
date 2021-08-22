@@ -172,12 +172,12 @@ def installDotFiles():
 
 
 def main():
-    #showWelcomeScreen()
-    #installXorg()
-    #installLxdm()
-    #installRegularPackages()
-    #installYayAurHelper()
-    #installAurPkgs()
+    showWelcomeScreen()
+    installXorg()
+    installLxdm()
+    installRegularPackages()
+    installYayAurHelper()
+    installAurPkgs()
     installDotFiles()
     
 
