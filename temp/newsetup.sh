@@ -9,7 +9,6 @@ import subprocess as sp
 
 cp = configparser.ConfigParser(allow_no_value=True)
 cp.read('packages.ini')
-lxdmCp = configparser.ConfigParser()
 username = sp.getoutput('whoami')
 
 
@@ -120,14 +119,10 @@ def installLxdm():
     os.system('sudo systemctl enable lxdm')
     # Copy lxdm.conf to local copy
     os.system('cp /etc/lxdm/lxdm.conf .')
-    lxdmCp.read('lxdm.conf')
-    # Modify config
-    lxdmCp['base']['autologin'] = username
-    lxdmCp['base']['numlock'] = '1'
-    lxdmCp['base']['session'] = sp.getoutput('which bspwm')
-    # write
-    saveLxdmConf()
-    os.system('sudo cp lxdm.conf /etc/lxdm/lxdm.conf')
+    os.system(f'sed -i "s/# autologin=dgod/autologin={username}/" lxdm.conf')
+    os.system('sed -i "s/# numlock=0/numlock=1/" lxdm.conf')
+    os.system('sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf')
+    os.system('sudo cp -f lxdm.conf /etc/lxdm/lxdm.conf')
     os.system('rm lxdm.conf')
     pause()
     
@@ -195,16 +190,16 @@ def installGrubTheme():
 
 
 def main():
-    showWelcomeScreen()
-    updateAndUpgrade()
-    installXorg()
+    #showWelcomeScreen()
+    #updateAndUpgrade()
+    #installXorg()
     installLxdm()
-    installRegularPackages()
-    installYayAurHelper()
-    installAurPkgs()
-    installDotFiles()
-    installGrubTheme()
-    showFinalMessage()
+    #installRegularPackages()
+    #installYayAurHelper()
+    #installAurPkgs()
+    #installDotFiles()
+    #installGrubTheme()
+    #showFinalMessage()
     
 
 if __name__ == "__main__":
