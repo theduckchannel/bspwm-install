@@ -175,14 +175,13 @@ def installDotFiles():
     pause()
 
 
-def updateAndUpgrade():    
-	os.system('sudo pacman --noconfirm -Syyu')
+def updateAndUpgrade():
+    cprint('\r\n:: Update and Upgrading your system...', fg='y', style='b')
+    os.system('sudo pacman --noconfirm -Syyu')
 
 def finalMessage():
     cprint('\r\n:: Everything ok...', fg='y', style='b')
     cprint('Now you can reboot.', fg='g', style='b')
-
-
 
 def main():
     showWelcomeScreen()
