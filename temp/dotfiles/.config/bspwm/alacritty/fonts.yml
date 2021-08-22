@@ -1,0 +1,34 @@
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: "Fira Code"
+    #style: Regular
+
+  # Bold font face
+  bold:
+    family: "Fira Code"
+    #style: Bold
+
+  # Italic font face
+  italic:
+    family: "Fira Code"
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "Fira code"
+    #style: Bold Italic
+
+  # Point size
+  size: 12
+
+  # Offset
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset
+  #glyph_offset:
+  #  x: 0
+  #  y: 0

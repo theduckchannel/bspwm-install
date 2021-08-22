@@ -1,0 +1,50 @@
+#!/bin/bash
+
+DIR="$HOME/.config/bspwm"
+BSP="$HOME/.config/bspwm/themes"
+rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
+
+# Themes
+theme_0=" Nord"
+theme_1=" Nordic"
+theme_2=" Gruvbox"
+theme_3=" Dracula"
+theme_4=" Forest"
+theme_5=" Cyberpunk"
+theme_6=" Groot"
+theme_7=" Blade"
+theme_8=" Rick"
+
+# Variable passed to rofi
+options="$theme_0\n$theme_1\n$theme_2\n$theme_3\n$theme_4\n$theme_5\n$theme_6\n$theme_7\n$theme_8"
+
+chosen="$(echo -e "$options" | $rofi_command -p "Available themes" -dmenu -selected-row 0)"
+case $chosen in
+    $theme_0)
+        bash ${BSP}/set-theme 'nord.jpg' 'nord' 'Arc-Dark' 'Arc-Circle' 'Arc-Cursor-Dark'
+        ;;
+    $theme_1)
+        bash ${BSP}/set-theme 'nordic.jpg' 'nord' 'Nordic' 'Nordic-Folders' 'Nordic-Cursor'
+        ;;
+    $theme_2)
+        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Arc-Cursor-Yellow'
+        ;;
+    $theme_3)
+        bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Nordic-Cursor'
+        ;;
+    $theme_4)
+        bash ${BSP}/set-theme  'forest.jpg' 'forest' 'Adapta-Nokto' 'Luv-Folders-Dark' 'Archcraft-Cursor-Dark'
+        ;;
+    $theme_5)
+        bash ${BSP}/set-theme  'cyberpunk.jpg' 'cyberpunk' 'Cyberpunk' 'Archcraft-Dark' 'Arc-Cursor-Cyan'
+        ;;
+    $theme_6)
+        bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Arc-Cursor-Yellow'
+        ;;
+    $theme_7)
+        bash ${BSP}/set-theme  'blade.jpg' 'blade' 'Blade' 'Nordic-Folders' 'Nordic-Cursor'
+        ;;
+    $theme_8)
+        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'White-Folders' 'Archcraft-Cursor'
+        ;;
+esac

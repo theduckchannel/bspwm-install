@@ -12,6 +12,8 @@ import subprocess as sp
 cp = configparser.ConfigParser(allow_no_value=True)
 cp.read('packages.ini')
 lxdmCp = configparser.ConfigParser()
+username = sp.getoutput('whoami')
+
 
 def cprint( fmt, fg=None, bg=None, style=None ):
     """
@@ -121,7 +123,6 @@ def installLxdm():
     # Copy lxdm.conf to local copy
     os.system('cp /etc/lxdm/lxdm.conf .')
     lxdmCp.read('lxdm.conf')
-    username = sp.getoutput('whoami')
     # Modify config
     lxdmCp['base']['autologin'] = username
     lxdmCp['base']['numlock'] = '1'
@@ -159,13 +160,26 @@ def installAurPkgs():
 
     pause()
 
+
+def installDotFiles():
+    # if ~/.config not exists, so create
+    cprint('\r\n:: Installing dotfiles...', fg='y', style='b')
+    if(not os.path.isdir(f'/home/{username}/.config')):
+        os.mkdir(f'/home/{username}/.config')
+    
+    os.system(f'cp -rf {os.getcwd()}/dotfiles/.* /home/{username}/.config')
+    pause()
+
+
 def main():
     #showWelcomeScreen()
     #installXorg()
     #installLxdm()
-    installRegularPackages()
+    #installRegularPackages()
     #installYayAurHelper()
     #installAurPkgs()
+    installDotFiles()
+    
 
 
 
