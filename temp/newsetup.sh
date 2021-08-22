@@ -109,42 +109,64 @@ def showWelcomeScreen():
 
 def installXorg():
     cprint('\r\n\r\n:: Installing xorg...', fg='y', style='b')    
-    #os.system('sudo pacman --noconfirm -S xorg')
+    os.system('sudo pacman --noconfirm -S xorg')
     pause()
 
 
 def installLxdm(): 
-    cprint('\r\n\r\n:: Installing Lxdm...', fg='y', style='b')    
-    #os.system('sudo pacman --noconfirm -S lxdm')
-    #os.system('sudo systemctl enable lxdm')
+    cprint('\r\n\r\n:: Installing Lxdm...', fg='y', style='b') 
+    # install and enable lxdm   
+    os.system('sudo pacman --noconfirm -S lxdm')
+    os.system('sudo systemctl enable lxdm')
     # Copy lxdm.conf to local copy
     os.system('cp /etc/lxdm/lxdm.conf .')
-    username = sp.getoutput('whoami')
     lxdmCp.read('lxdm.conf')
-    #lxdmCp.set('base', 'autologin',username)
+    username = sp.getoutput('whoami')
+    # Modify config
     lxdmCp['base']['autologin'] = username
     lxdmCp['base']['numlock'] = '1'
     lxdmCp['base']['session'] = sp.getoutput('which bspwm')
+    # write
     saveLxdmConf()
     os.system('sudo cp lxdm.conf /etc/lxdm/lxdm.conf')
     os.system('rm lxdm.conf')
     pause()
     
 
-
 def installRegularPackages():
     cprint('\r\n:: Installing Regular packages...', fg='y', style='b')
     regPkgs = ''
     for pkg in cp['Regular']:
-        #print(pkg)
         regPkgs = regPkgs + pkg + ' '
 
     print(regPkgs)
+    os.system(f'sudo pacman --noconfirm -S {regPkgs}')
+    pause()
+
+def installYayAURHelper():
+    cprint('\r\n:: Install Yay AUR Helper...', fg='y', style='b')
+    os.system('git clone https://aur.archlinux.org/yay.git') 
+    os.system('cd yay')
+    os.system('makepkg -si')
+    os.system('cd ..')
+    os.system('rm -rf yay')
+    pause()
+
+def installAurPkgs():
+    cprint('\r\n:: Installing AUR packages...', fg='y', style='b')
+    for pkg in cp['AUR']:
+        os.system(f'yay --noconfirm -S {pkg}')
+
+    pause()
 
 def main():
     showWelcomeScreen()
     installXorg()
     installLxdm()
+    installRegularPackages()
+    installYayAURHelper()
+
+
 
 
 if __name__ == "__main__":
