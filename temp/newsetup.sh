@@ -167,18 +167,32 @@ def installDotFiles():
     if(not os.path.isdir(f'/home/{username}/.config')):
         os.mkdir(f'/home/{username}/.config')
     
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.* /home/{username}/.config')
+    os.system(f'cp -rf {os.getcwd()}/dotfiles/.config/* /home/{username}/.config')
+    os.system(f'cp -rf {os.getcwd()}/dotfiles/.Xre* /home/{username}/')
+    os.system(f'cp -rf {os.getcwd()}/dotfiles/.xs* /home/{username}/')
+    os.system(f'cp -rf {os.getcwd()}/dotfiles/.fe* /home/{username}/')
     pause()
+
+
+def updateAndUpgrade():    
+	os.system('sudo pacman --noconfirm -Syyu')
+
+def finalMessage():
+    cprint('\r\n:: Everything ok...', fg='y', style='b')
+    cprint('Now you can reboot.', fg='g', style='b')
+
 
 
 def main():
     showWelcomeScreen()
+    updateAndUpgrade()
     installXorg()
     installLxdm()
     installRegularPackages()
     installYayAurHelper()
     installAurPkgs()
     installDotFiles()
+    finalMessage()
     
 
 
