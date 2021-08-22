@@ -187,19 +187,21 @@ def installGrubTheme():
     os.system('rm grub')
 
 
-
+def polyBarConfig():
+    pass
+    
 
 def main():
-    #showWelcomeScreen()
-    #updateAndUpgrade()
-    #installXorg()
+    showWelcomeScreen()
+    updateAndUpgrade()
+    installXorg()
     installLxdm()
-    #installRegularPackages()
-    #installYayAurHelper()
-    #installAurPkgs()
-    #installDotFiles()
-    #installGrubTheme()
-    #showFinalMessage()
+    installRegularPackages()
+    installYayAurHelper()
+    installAurPkgs()
+    installDotFiles()
+    installGrubTheme()
+    showFinalMessage()
     
 
 if __name__ == "__main__":
