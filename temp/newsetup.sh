@@ -143,12 +143,12 @@ def installRegularPackages():
     os.system(f'sudo pacman --noconfirm -S {regPkgs}')
     pause()
 
-def installYayAURHelper():
+def installYayAurHelper():
     cprint('\r\n:: Install Yay AUR Helper...', fg='y', style='b')
     os.system('git clone https://aur.archlinux.org/yay.git') 
-    os.system('cd yay')
+    os.chdir('yay')
     os.system('makepkg -si')
-    os.system('cd ..')
+    os.chdir('../')
     os.system('rm -rf yay')
     pause()
 
@@ -160,11 +160,12 @@ def installAurPkgs():
     pause()
 
 def main():
-    showWelcomeScreen()
-    installXorg()
-    installLxdm()
+    #showWelcomeScreen()
+    #installXorg()
+    #installLxdm()
     installRegularPackages()
-    installYayAURHelper()
+    #installYayAurHelper()
+    #installAurPkgs()
 
 
 
