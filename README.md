@@ -26,7 +26,7 @@ You need clone this repository:
 $ git clone https://github.com/theduckchannel/duckchannel-style-bspwm.git
 $ cd duckchannel-style-bspwm
 $ chmod +x setup.sh 
-$ ./setup.sh
+$ ./setup.py
 ```
 
 And be patient because the command above will install every packages you need for minimal and light bspwm environment.
