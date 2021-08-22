@@ -7,8 +7,6 @@ import subprocess as sp
 # Python 3, function
 # Author: J.Hadida (jhadida87 at ggooglemail)
 
-#allow_no_value=False
-
 cp = configparser.ConfigParser(allow_no_value=True)
 cp.read('packages.ini')
 lxdmCp = configparser.ConfigParser()
@@ -183,15 +181,28 @@ def showFinalMessage():
     cprint('\r\n:: Everything ok...', fg='y', style='b')
     cprint('Now you can reboot.', fg='g', style='b')
 
+
+def installGrubTheme():
+    cprint('\r\n:: Installing Grub Theme...', fg='y', style='b')
+    os.system(f'sudo cp -rf {os.getcwd()}/grub-themes/XeroComp /boot/grub/themes')
+    os.system(f'cp /etc/default/grub .')
+    os.system("sed -i 's/#GRUB_THEME=.*/GRUB_THEME=\"\/boot\/grub\/themes\/XeroComp\/theme.txt\"/' grub") 
+    os.system('sudo cp -f grub /etc/default/grub')
+    os.system('sudo grub-mkconfig -o /boot/grub/grub.cfg')
+
+
+
+
 def main():
-    showWelcomeScreen()
-    updateAndUpgrade()
-    installXorg()
-    installLxdm()
-    installRegularPackages()
-    installYayAurHelper()
-    installAurPkgs()
-    installDotFiles()
+    #showWelcomeScreen()
+    #updateAndUpgrade()
+    #installXorg()
+    #installLxdm()
+    #installRegularPackages()
+    #installYayAurHelper()
+    #installAurPkgs()
+    #installDotFiles()
+    installGrubTheme()
     showFinalMessage()
     
 
