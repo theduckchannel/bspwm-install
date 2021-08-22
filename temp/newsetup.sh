@@ -179,7 +179,7 @@ def updateAndUpgrade():
     cprint('\r\n:: Update and Upgrading your system...', fg='y', style='b')
     os.system('sudo pacman --noconfirm -Syyu')
 
-def finalMessage():
+def showFinalMessage():
     cprint('\r\n:: Everything ok...', fg='y', style='b')
     cprint('Now you can reboot.', fg='g', style='b')
 
@@ -192,11 +192,8 @@ def main():
     installYayAurHelper()
     installAurPkgs()
     installDotFiles()
-    finalMessage()
+    showFinalMessage()
     
-
-
-
 
 if __name__ == "__main__":
     main()
