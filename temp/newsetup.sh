@@ -189,19 +189,20 @@ def installGrubTheme():
     os.system("sed -i 's/#GRUB_THEME=.*/GRUB_THEME=\"\/boot\/grub\/themes\/XeroComp\/theme.txt\"/' grub") 
     os.system('sudo cp -f grub /etc/default/grub')
     os.system('sudo grub-mkconfig -o /boot/grub/grub.cfg')
+    os.system('rm grub')
 
 
 
 
 def main():
-    #showWelcomeScreen()
-    #updateAndUpgrade()
-    #installXorg()
-    #installLxdm()
-    #installRegularPackages()
-    #installYayAurHelper()
-    #installAurPkgs()
-    #installDotFiles()
+    showWelcomeScreen()
+    updateAndUpgrade()
+    installXorg()
+    installLxdm()
+    installRegularPackages()
+    installYayAurHelper()
+    installAurPkgs()
+    installDotFiles()
     installGrubTheme()
     showFinalMessage()
     
