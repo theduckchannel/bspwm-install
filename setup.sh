@@ -188,7 +188,8 @@ def installGrubTheme():
 
 
 def polyBarConfig():
-    pass
+    cprint('\r\n:: Polybar Config...', fg='y', style='b')
+    os.system('./polybar-config.sh')
     
 
 def main():
@@ -201,6 +202,7 @@ def main():
     installAurPkgs()
     installDotFiles()
     installGrubTheme()
+    polyBarConfig()
     showFinalMessage()
     
 
