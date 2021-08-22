@@ -173,6 +173,7 @@ def updateAndUpgrade():
 def showFinalMessage():
     cprint('\r\n:: Everything ok...', fg='y', style='b')
     input('Press any key to REBOOT!')
+    os.system('reboot')
 
 
 def installGrubTheme():
