@@ -50,6 +50,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'ajorgensen/vim-markdown-toc'
 
 
 if isdirectory('/usr/local/opt/fzf')
@@ -729,3 +730,6 @@ else
 endif
 
 hi Normal guibg=NONE ctermbg=NONE
+au VimEnter *  NERDTree
+
+let g:mdtoc_starting_header_level = 1
