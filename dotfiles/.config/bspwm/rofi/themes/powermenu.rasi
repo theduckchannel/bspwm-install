@@ -106,6 +106,8 @@ element {
 element-icon {
     size:                           24px;
     border:                         0px;
+    background-color: 				transparent;
+    text-color:						@foreground;
 }
 
 element-text {
@@ -114,6 +116,8 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0;
     margin:                         2px 0px 2px 2px;
+    background-color:			    transparent;
+    text-color:						@foreground;
 }
 
 element normal.urgent,
@@ -130,7 +134,7 @@ element alternate.active {
 }
 
 element selected {
-    background-color:               @selected;
+    background-color:               #042d59;
     text-color:                     @background;
     border:                  		0px;
     border-radius:                  0px;
