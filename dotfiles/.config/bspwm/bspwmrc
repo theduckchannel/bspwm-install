@@ -71,6 +71,7 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Enable power management
 xfce4-power-manager &
+optimus-manager-qt  &
 
 # Fix cursor
 xsetroot -cursor_name left_ptr
@@ -89,4 +90,4 @@ bspfloat &
 /usr/bin/nm-applet &
 
 ## Adjust backlight (AMD)
-#blight -d amdgpu_bl0 set 15%
+blight -d amdgpu_bl0 set 15%

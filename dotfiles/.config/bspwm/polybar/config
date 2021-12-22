@@ -55,7 +55,6 @@ font-1 = "Iosevka Nerd Font:size=12;3"
 modules-left = mod bspwm 
 modules-center = 
 modules-right = cpu memory filesystem backlight battery network volume date
-
 separator =
 spacing = 0
 
